@@ -214,7 +214,7 @@ def boost_deps():
             sha256 = "7bd7ddceec1a1dfdcbdb3e609b60d01739c38390a5f956385a12f3122049f0ca",
             strip_prefix = "boost_1_76_0",
             urls = [
-                "https://archives.boost.io/ https://archives.boost.io/release/1.76.0/source/boost_1_76_0.tar.bz2",
+                "https://archives.boost.io/release/1.76.0/source/boost_1_76_0.tar.bz2",
             ],
         )
 
