@@ -161,7 +161,7 @@ def boost_deps():
     if "net_zlib_zlib" not in native.existing_rules():
         http_archive(
             name = "net_zlib_zlib",
-            build_file = "@com_github_nelhage_rules_boost//:BUILD.zlib",
+            build_file = "@com_github_asutermo_rules_boost//:BUILD.zlib",
             sha256 = "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1",
             strip_prefix = "zlib-1.2.11",
             urls = [
@@ -175,7 +175,7 @@ def boost_deps():
     if "org_bzip_bzip2" not in native.existing_rules():
         http_archive(
             name = "org_bzip_bzip2",
-            build_file = "@com_github_nelhage_rules_boost//:BUILD.bzip2",
+            build_file = "@com_github_asutermo_rules_boost//:BUILD.bzip2",
             sha256 = "ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269",
             strip_prefix = "bzip2-1.0.8",
             url = "https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz",
@@ -184,7 +184,7 @@ def boost_deps():
     if "org_lzma_lzma" not in native.existing_rules():
         http_archive(
             name = "org_lzma_lzma",
-            build_file = "@com_github_nelhage_rules_boost//:BUILD.lzma",
+            build_file = "@com_github_asutermo_rules_boost//:BUILD.lzma",
             sha256 = "71928b357d0a09a12a4b4c5fafca8c31c19b0e7d3b8ebb19622e96f26dbf28cb",
             strip_prefix = "xz-5.2.3",
             urls = [
@@ -196,7 +196,7 @@ def boost_deps():
     if "com_github_facebook_zstd" not in native.existing_rules():
         http_archive(
             name = "com_github_facebook_zstd",
-            build_file = "@com_github_nelhage_rules_boost//:BUILD.zstd",
+            build_file = "@com_github_asutermo_rules_boost//:BUILD.zstd",
             sha256 = "59ef70ebb757ffe74a7b3fe9c305e2ba3350021a918d168a046c6300aeea9315",
             strip_prefix = "zstd-1.4.4",
             urls = [
@@ -208,7 +208,7 @@ def boost_deps():
     if "boost" not in native.existing_rules():
         http_archive(
             name = "boost",
-            build_file = "@com_github_nelhage_rules_boost//:BUILD.boost",
+            build_file = "@com_github_asutermo_rules_boost//:BUILD.boost",
             patch_cmds = ["rm -f doc/pdf/BUILD"],
             patch_cmds_win = ["Remove-Item -Force doc/pdf/BUILD"],
             sha256 = "ba077e45ea5f5a0a34f4478b7038033f539acba5c5449c20a1959b08df896e5f",

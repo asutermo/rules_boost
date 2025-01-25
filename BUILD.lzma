@@ -38,11 +38,11 @@ config_setting(
 copy_file(
     name = "copy_config",
     src = select({
-        ":android": "@com_github_nelhage_rules_boost//:config.lzma-linux.h",
-        ":linux": "@com_github_nelhage_rules_boost//:config.lzma-linux.h",
-        ":osx_arm64": "@com_github_nelhage_rules_boost//:config.lzma-osx-arm64.h",
-        ":osx_x86_64": "@com_github_nelhage_rules_boost//:config.lzma-osx-x86_64.h",
-        ":windows": "@com_github_nelhage_rules_boost//:config.lzma-windows.h",
+        ":android": "@com_github_asutermo_rules_boost//:config.lzma-linux.h",
+        ":linux": "@com_github_asutermo_rules_boost//:config.lzma-linux.h",
+        ":osx_arm64": "@com_github_asutermo_rules_boost//:config.lzma-osx-arm64.h",
+        ":osx_x86_64": "@com_github_asutermo_rules_boost//:config.lzma-osx-x86_64.h",
+        ":windows": "@com_github_asutermo_rules_boost//:config.lzma-windows.h",
     }),
     out = "src/liblzma/api/config.h", # minimize the number of exported include paths
 )

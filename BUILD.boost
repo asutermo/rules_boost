@@ -1,6 +1,6 @@
 load("@bazel_skylib//rules:copy_file.bzl", "copy_file")
 load("@bazel_skylib//lib:selects.bzl", "selects")
-load("@com_github_nelhage_rules_boost//:boost/boost.bzl", "boost_library", "boost_so_library", "hdr_list")
+load("@com_github_asutermo_rules_boost//:boost/boost.bzl", "boost_library", "boost_so_library", "hdr_list")
 
 _w_no_deprecated = selects.with_or({
     (":linux", ":osx"): [
@@ -416,7 +416,7 @@ boost_library(
     name = "asio",
     srcs = [
         "boost/asio/impl/src.hpp",
-        "@com_github_nelhage_rules_boost//src:build_asio.cpp",
+        "@com_github_asutermo_rules_boost//src:build_asio.cpp",
     ],
     defines = [
         "BOOST_ASIO_SEPARATE_COMPILATION",
@@ -441,7 +441,7 @@ boost_library(
 cc_library(
     name = "asio_ssl",
     srcs = [
-        "@com_github_nelhage_rules_boost//src:build_asio_ssl.cpp",
+        "@com_github_asutermo_rules_boost//src:build_asio_ssl.cpp",
     ],
     visibility = ["//visibility:public"],
     deps = [
